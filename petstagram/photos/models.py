@@ -13,5 +13,5 @@ class Photo(models.Model):
                                    null=True)
 
     location = models.CharField(max_length=30, blank=True, null=True)
-    tagged_pets = models.ManyToManyField(Pet, blank=True)
+    tagged_pets = models.ManyToManyField(to=Pet, blank=True)
     created_at = models.DateTimeField(auto_now=True)
